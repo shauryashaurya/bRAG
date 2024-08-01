@@ -16,4 +16,13 @@ Exploring [Retrieval-augmented generation](https://en.wikipedia.org/wiki/Retriev
 * The OG paper that introduced **RAG**s:   
 	* [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401)  
 	* also [pdf](https://arxiv.org/pdf/2005.11401)  
+* [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](https://arxiv.org/abs/2310.11511)
+	* [pdf](https://arxiv.org/pdf/2310.11511)
+	* [huggingface](https://huggingface.co/papers/2310.11511)
+* maybe? 
+	* [RAGFlow](https://github.com/infiniflow/ragflow)
+	* [DAIR.AI Prompt Engineering Guide](https://www.promptingguide.ai/), also [GitHub](https://github.com/dair-ai/Prompt-Engineering-Guide)
+	* [langchain-ai rag-from-scratch](https://github.com/langchain-ai/rag-from-scratch)
 	
+	   
+---
