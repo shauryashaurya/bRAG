@@ -46,7 +46,7 @@ The evolution can be summarised as three overlapping waves:
 - **Incorrect** (low confidence): The system falls back to web search for fresh information.
 - **Ambiguous** (medium confidence): Both the original documents and web search results are combined.
 
-**Key differentiation from Self-RAG:** Self-RAG requires training the LLM itself with special tokens. CRAG is a modular wrapper — any retriever, any generator, any evaluator can be swapped. This makes it far more practical for production where you use API-based models (GPT-4, Claude) that you can't fine-tune.
+**Key differentiation from Self-RAG:** Self-RAG requires training the LLM itself with special tokens. CRAG is a modular wrapper — any retriever, any generator, any evaluator can be swapped. This makes it far more practical for production where one use API-based models (GPT-4, Claude) that one can't fine-tune.
 
 **Key benefit:** Robust against retrieval failure. When the retriever returns garbage, the system self-corrects rather than hallucinating.
 
@@ -66,7 +66,7 @@ The evolution can be summarised as three overlapping waves:
 4. Repeat: cluster the summaries, summarise the clusters, creating grandparent nodes.
 5. Continue until a single root summary exists.
 
-At query time, you can retrieve from any level — specific leaf chunks for detail questions, mid-level summaries for thematic questions, or root-level summaries for "what is this corpus about?" questions.
+At query time, one can retrieve from any level — specific leaf chunks for detail questions, mid-level summaries for thematic questions, or root-level summaries for "what is this corpus about?" questions.
 
 **Key differentiation:** RAPTOR is the first system to apply recursion at *indexing time* (building the tree offline). This contrasts sharply with 2026's RLMs, which apply recursion at *inference time* (processing context online). RAPTOR's tree is static once built; RLMs generate their decomposition strategy dynamically for each query.
 
@@ -535,9 +535,9 @@ class BaseRAGSystem(ABC):
               supports_memory, supports_streaming, max_context_tokens."""
 ```
 
-### 6.4 What This Architecture Reveals
+### 6.4 What This Architecture Reveals             
 
-By running all systems against the same queries and corpus, you can directly observe the evolution:
+By running all systems against the same queries and corpus, one can directly observe the evolution:
 
 **Query type: Simple factual ("What year was the company founded?")**
 - Naive RAG, Adaptive-RAG (no-retrieval path), and most systems perform similarly.
@@ -571,7 +571,7 @@ By running all systems against the same queries and corpus, you can directly obs
 - MemOS succeeds and can share this across multiple agent instances.
 - **Lesson:** Memory is orthogonal to retrieval — you need both.
 
-### 6.5 The Evolution Dimensions
+### 6.5 The Evolution Dimensions      
 
 The benchmark framework measures progress along five axes:
 
@@ -588,14 +588,14 @@ The benchmark framework measures progress along five axes:
         (context size)          (cross-session)
 ```
 
-**2020 (Naive RAG):** Moderate accuracy, no adaptability, moderate efficiency, small scale, no memory.
-**2024 (Self-RAG + GraphRAG):** High accuracy, adaptive retrieval, moderate efficiency, medium scale, no memory.
-**2025 (Agentic RAG + Mem0):** High accuracy, fully adaptive agents, variable efficiency, medium scale, persistent memory.
-**2026 (RLM + Context Engine):** High accuracy, recursively adaptive, efficient (targeted sub-calls), unbounded scale, integrated memory.
+**2020 (Naive RAG):** Moderate accuracy, no adaptability, moderate efficiency, small scale, no memory.    
+**2024 (Self-RAG + GraphRAG):** High accuracy, adaptive retrieval, moderate efficiency, medium scale, no memory.    
+**2025 (Agentic RAG + Mem0):** High accuracy, fully adaptive agents, variable efficiency, medium scale, persistent memory.    
+**2026 (RLM + Context Engine):** High accuracy, recursively adaptive, efficient (targeted sub-calls), unbounded scale, integrated memory.     
 
 ---
 
-## Part 7: Summary — The Arc of the Evolution
+## Part 7: The Overarching Arc   
 
 The story of 2024–2026 is one of progressive *agency* and *self-management*:
 
@@ -609,4 +609,7 @@ The through-line: AI systems are progressively taking over responsibilities that
 
 ---
 
-*Document compiled February 2026. Covers innovations from 2024 through early 2026 with references to 30+ papers, code repositories, and frameworks.*
+*Document compiled February 2026.*      
+*Covers innovations from 2024 through early 2026*    
+*Barely past Valentine's Day 2026 and we've already got over 6000 papers on Arxiv*      
+*Obvs. I would've missed some stuff...*     
