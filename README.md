@@ -1,6 +1,15 @@
-# b***rag***            
-            
-B**rag**gosaurus Rex, the f**rag**rant one, d**rag**on of p**rag**ue, keeper of the **rag**tag d**rag**oons...            
+<html> 
+	<h1>b<span style="background-color: #ffeb3b; font-weight: bold; text-transform: uppercase; padding: 0 2px;">RAG</span></h1>
+
+	<p>
+		B<span style="background-color: #ffeb3b; font-weight: bold; text-transform: uppercase; padding: 0 2px;">RAG</span>gosaurus Rex, 
+		the f<span style="background-color: #ffeb3b; font-weight: bold; text-transform: uppercase; padding: 0 2px;">RAG</span>rant one, 
+		d<span style="background-color: #ffeb3b; font-weight: bold; text-transform: uppercase; padding: 0 2px;">RAG</span>on of 
+		p<span style="background-color: #ffeb3b; font-weight: bold; text-transform: uppercase; padding: 0 2px;">RAG</span>ue, 
+		keeper of the <span style="background-color: #ffeb3b; font-weight: bold; text-transform: uppercase; padding: 0 2px;">RAG</span>tag 
+		d<span style="background-color: #ffeb3b; font-weight: bold; text-transform: uppercase; padding: 0 2px;">RAG</span>oons...
+	</p>
+</html>
           
 <html>           
 	<img src="./images/bRAG-cover-small.png" width="95%" align="center" alt="Braggosaurus Rex, the fRAGrant one, dRAGon of pRAGue, keeper of the RAGtag dRAGoons... © Shaurya Agarwal, 2024" />            
