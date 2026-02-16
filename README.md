@@ -1,14 +1,14 @@
 <html> 
 	<h1>b<span style="background-color: #ffeb3b; font-weight: bold; text-transform: uppercase; padding: 0 2px;">RAG</span></h1>
-
-	<p>
-		B<span style="background-color: #ffeb3b; font-weight: bold; text-transform: uppercase; padding: 0 2px;">RAG</span>gosaurus Rex, 
-		the f<span style="background-color: #ffeb3b; font-weight: bold; text-transform: uppercase; padding: 0 2px;">RAG</span>rant one, 
-		d<span style="background-color: #ffeb3b; font-weight: bold; text-transform: uppercase; padding: 0 2px;">RAG</span>on of 
-		p<span style="background-color: #ffeb3b; font-weight: bold; text-transform: uppercase; padding: 0 2px;">RAG</span>ue, 
-		keeper of the <span style="background-color: #ffeb3b; font-weight: bold; text-transform: uppercase; padding: 0 2px;">RAG</span>tag 
-		d<span style="background-color: #ffeb3b; font-weight: bold; text-transform: uppercase; padding: 0 2px;">RAG</span>oons...
-	</p>
+<br/>
+<br/>
+	B<span style="background-color: #ffeb3b; font-weight: bold; text-transform: uppercase; padding: 0 2px;">RAG</span>gosaurus Rex, 
+	the f<span style="background-color: #ffeb3b; font-weight: bold; text-transform: uppercase; padding: 0 2px;">RAG</span>rant one, 
+	d<span style="background-color: #ffeb3b; font-weight: bold; text-transform: uppercase; padding: 0 2px;">RAG</span>on of 
+	p<span style="background-color: #ffeb3b; font-weight: bold; text-transform: uppercase; padding: 0 2px;">RAG</span>ue, 
+	keeper of the <span style="background-color: #ffeb3b; font-weight: bold; text-transform: uppercase; padding: 0 2px;">RAG</span>tag 
+	d<span style="background-color: #ffeb3b; font-weight: bold; text-transform: uppercase; padding: 0 2px;">RAG</span>oons...
+	
 </html>
           
 <html>           
