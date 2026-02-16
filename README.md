@@ -2,11 +2,9 @@
 	<h1>b<span style="background-color: #ffeb3b; font-weight: bold; text-transform: uppercase; padding: 0 2px;">RAG</span></h1>
 <br/>
 <br/>
-B<b background="#ffeb3b" color="red" uppercase>RAG</b>gosaurus Rex, the f<b background="#ffeb3b" color="red" uppercase>RAG</b>rant one, d<b background="#ffeb3b" color="red" uppercase>RAG</b>on of p<b background="#ffeb3b" color="red" uppercase>RAG</b>ue, keeper of the <b background="#ffeb3b" color="red" uppercase>RAG</b>tag d<b background="#ffeb3b" color="red" uppercase>RAG</b>oons...
-<br/>  
-</html>
-          
-<html>           
+<h1>b<strong><font style="background:#ffeb3b;color:red;text-transform:uppercase">RAG</font></strong></h1>B<strong><font style="background:#ffeb3b;color:red;text-transform:uppercase">RAG</font></strong>gosaurus Rex, the f<strong><font style="background:#ffeb3b;color:red;text-transform:uppercase">RAG</font></strong>rant one, d<strong><font style="background:#ffeb3b;color:red;text-transform:uppercase">RAG</font></strong>on of p<strong><font style="background:#ffeb3b;color:red;text-transform:uppercase">RAG</font></strong>ue, keeper of the <strong><font style="background:#ffeb3b;color:red;text-transform:uppercase">RAG</font></strong>tag d<strong><font style="background:#ffeb3b;color:red;text-transform:uppercase">RAG</font></strong>oons...
+
+<br/> <br/>  
 	<img src="./images/bRAG-cover-small.png" width="95%" align="center" alt="Braggosaurus Rex, the fRAGrant one, dRAGon of pRAGue, keeper of the RAGtag dRAGoons... © Shaurya Agarwal, 2024" />            
 </html>              
            
