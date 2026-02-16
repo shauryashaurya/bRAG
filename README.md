@@ -33,7 +33,9 @@ Exploring [Retrieval-augmented generation](https://en.wikipedia.org/wiki/Retriev
 * maybe?           
 	* [RAGFlow](https://github.com/infiniflow/ragflow)          
 	* [DAIR.AI Prompt Engineering Guide](https://www.promptingguide.ai/), also [GitHub](https://github.com/dair-ai/Prompt-Engineering-Guide)          
-	* [langchain-ai rag-from-scratch](https://github.com/langchain-ai/rag-from-scratch)          
+	* [langchain-ai rag-from-scratch](https://github.com/langchain-ai/rag-from-scratch)    
+	* [Recursive Language Models](https://arxiv.org/abs/2512.24601), [PDF](https://arxiv.org/pdf/2512.24601)
+		* [The Google Cloud Community Article](https://discuss.google.dev/t/recursive-language-models-in-adk/323523)
 	          
 	             
 ---
