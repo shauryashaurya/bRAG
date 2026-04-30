@@ -150,19 +150,17 @@ def _(create_pandas_dataframe_agent, df_albums, df_artists, df_songs, llm):
 def _(mo):
     mo.md(
         r"""
-  
     ## How the Agent Actually Works  
-  
+
     `create_pandas_dataframe_agent` does **not** send all your data to Google:  
-  
+
     1. It sends the dataframe **schema + a few sample rows** to the LLM as context  
     2. The LLM writes **Python/pandas code** to answer the question  
     3. That code runs **locally** in a Python REPL  
     4. If the result needs interpretation, only the **output** (a number, a small table) goes back to the LLM  
     5. The LLM returns a final natural language answer  
-  
-    So for `"How many songs were released before 1990?"`, Google only ever sees the column names, a sample row, and the scalar result (e.g. `342`) — not your full CSV.  
-  
+
+    So for `"How many songs were released before 1990?"`, Google only ever sees the column names, a sample row, and the scalar result (e.g. `342`) — not your full CSV.
     """
     )
     return
@@ -186,7 +184,7 @@ def _(mo):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Approaches to Minimize LLM Exposure  """)
+    mo.md(r"""## Approaches to Minimize LLM Exposure""")
     return
 
 
@@ -199,7 +197,7 @@ def _(mo):
     df_safe = df_songs[["title", "releaseDate", "duration"]]  # drop sensitive cols  
 
     music_historian = create_pandas_dataframe_agent(llm=llm, df=df_safe, ...)  
-    ```  
+    ```
     """
     )
     return
@@ -215,7 +213,7 @@ def _(mo):
     df_summary = df_songs.groupby(df_songs["releaseDate"].str[:4])["id"].count()  
 
     music_historian = create_pandas_dataframe_agent(llm=llm, df=df_summary, ...)  
-    ```  
+    ```
     """
     )
     return
@@ -229,7 +227,7 @@ def _(mo):
     ```python  
     df_safe = df_songs.copy()  
     df_safe["artistIDs"] = df_safe["artistIDs"].apply(lambda x: "REDACTED")  
-    ```  
+    ```
     """
     )
     return
@@ -243,7 +241,7 @@ def _(mo):
     ```python  
     # The agent uses df.head() internally — you can truncate  
     df_sample = df_songs.sample(3)  # only 3 representative rows  
-    ```  
+    ```
     """
     )
     return
@@ -251,15 +249,13 @@ def _(mo):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Scaling to Enterprise  """)
+    mo.md(r"""## Scaling to Enterprise""")
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""There are three main architectural approaches, in order of increasing robustness:"""
-    )
+    mo.md(r"""There are three main architectural approaches, in order of increasing robustness:""")
     return
 
 
@@ -273,7 +269,7 @@ def _(mo):
     from langchain_ollama import ChatOllama  
     llm = ChatOllama(model="llama3")  
     # Everything runs on-premise, zero external API calls  
-    ```  
+    ```
     """
     )
     return
@@ -292,7 +288,7 @@ def _(mo):
     db = SQLDatabase.from_uri("postgresql://user:pass@localhost/musicdb")  
     agent = create_sql_agent(llm=llm, db=db, verbose=True)  
     # LLM only sees table schema + query result, never raw rows  
-    ```  
+    ```
     """
     )
     return
@@ -307,7 +303,7 @@ def _(mo):
     ```python  
     from langchain_google_community import BigQueryVectorStore  
     # Query runs inside GCP, only the answer surfaces to the user  
-    ```  
+    ```
     """
     )
     return
