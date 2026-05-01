@@ -80,9 +80,11 @@ def _(client):
 def _(mo):
     mo.md(
         r"""
-    # 1. Brain  
+    # 1. LLM Brain  
 
-    The LLM (OpenAI, Gemini, Claude, etc. etc.) can act as a *brain* in that it can quickly convert your ask into a series of 'tasks' that will be executed by one or more 'tools'
+    The LLM (OpenAI, Gemini, Claude, etc. etc.) can act as a *brain* in that it can quickly convert your ask into a series of 'tasks' that will be executed by one or more 'tools'   
+    
+    You'll see that we'll keep repeating this section in one form or another...
     """
     )
     return

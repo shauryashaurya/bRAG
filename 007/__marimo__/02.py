@@ -126,6 +126,18 @@ def _(mo):
 
 
 @app.cell
+def _(mo):
+    mo.md(
+        r"""
+    ## 3.1 LLM    
+
+    This bit is going to be repeated everywhere - it's kinda the `void main()` or `__init__()` of things... just keep noticing it and how every 'brain' is initialized/setup.
+    """
+    )
+    return
+
+
+@app.cell
 def _(ChatGoogleGenerativeAI):
     llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
     return (llm,)

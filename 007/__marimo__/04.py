@@ -102,15 +102,35 @@ def _(client):
 
 
 @app.cell
+def _(mo):
+    mo.md(
+        r"""
+    # 1. LLM   
+    Same idea as before...
+    """
+    )
+    return
+
+
+@app.cell
 def _(ChatGoogleGenerativeAI):
-    # 1. LLM
     llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
     return (llm,)
 
 
 @app.cell
+def _(mo):
+    mo.md(
+        r"""
+    # 2. Prompt   
+    `MessagesPlaceholder` handles history injection cleanly
+    """
+    )
+    return
+
+
+@app.cell
 def _(ChatPromptTemplate, MessagesPlaceholder):
-    # 2. Prompt — MessagesPlaceholder handles history injection cleanly
     prompt = ChatPromptTemplate.from_messages(
         [
             ("system", "You are an expert."),
@@ -122,15 +142,67 @@ def _(ChatPromptTemplate, MessagesPlaceholder):
 
 
 @app.cell
+def _(mo):
+    mo.md(
+        r"""
+    # 3. Chain   
+  
+    LangChain Expression Language (**LCEL**) is a declarative, "pipe-based" syntax (using |) designed to compose LangChain components: **prompts, models, retrievers, and parsers** into a single 'chain' that can be easy to reason about.
+    """
+    )
+    return
+
+
+@app.cell
 def _(StrOutputParser, llm, prompt):
-    # 3. Chain
+    # express the chain as LCEL
     chain = prompt | llm | StrOutputParser()
     return (chain,)
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    LCEL uses **pipe operator** `|`, borrowed from Unix shell.    
+    Each component's output becomes the next component's input:     
+     
+    ```     
+    prompt            # formats your variables into a full prompt message     
+      |     
+    llm               # receives the prompt, returns an AIMessage object     
+      |     
+    StrOutputParser() # pulls the plain string out of the AIMessage object     
+    ```     
+     
+    Without the parser the chain returns an `AIMessage(content="...")` object. With it, you get a plain `str`.     
+     
+    It's equivalent to:     
+    ```python     
+    message = prompt.invoke({"human_input": "..."})     
+    ai_message = llm.invoke(message)     
+    result = StrOutputParser().invoke(ai_message)     
+    ```     
+     
+    Just written as one line instead of three.
+    """
+    )
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        r"""
+    # 4. Session store    
+    One `ChatMessageHistory` per session_id
+    """
+    )
+    return
+
+
 @app.cell
 def _(ChatMessageHistory):
-    # 4. Session store — one ChatMessageHistory per session_id
     store = {}
 
 
@@ -142,8 +214,13 @@ def _(ChatMessageHistory):
 
 
 @app.cell
-def _(RunnableWithMessageHistory, chain, get_session_history):
+def _():
     # 5. Wrap with history
+    return
+
+
+@app.cell
+def _(RunnableWithMessageHistory, chain, get_session_history):
     chat_chain = RunnableWithMessageHistory(
         chain,
         get_session_history,
@@ -177,7 +254,7 @@ def _(chat_chain, config):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""# Enterprise idiosyncracies""")
+    mo.md(r"""# 5. Enterprise idiosyncracies""")
     return
 
 
@@ -341,21 +418,21 @@ def _(mo):
         r"""
     ### Architecture Pattern (Prod)     
 
-
+    ```
     User request     
         |     
-        v     
+        V
     Redis (hot)              <-- LLM reads last N messages, fast, TTL-managed     
         |     
-        v     
+        V     
     Postgres (cold)          <-- full history, append-only, audit log     
         |                        row-level security for multi-tenant isolation     
-        v     
+        V     
     Elasticsearch (search)   <-- indexes full history for compliance search,     
         |                        analytics, and semantic/full-text recall     
-        v     
+        V     
     Vector DB (semantic)     <-- long-term episodic recall across sessions     
-
+    ```
 
     ---
     """

@@ -106,15 +106,35 @@ def _(DATA_DIR, os, pd):
 
 
 @app.cell
+def _(mo):
+    mo.md(
+        r"""
+    # 1. LLM    
+    We've done this before....
+    """
+    )
+    return
+
+
+@app.cell
 def _(ChatGoogleGenerativeAI):
-    # LLM
     llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
     return (llm,)
 
 
 @app.cell
+def _(mo):
+    mo.md(
+        r"""
+    # 2. Agent    
+    ...this bit is key.
+    """
+    )
+    return
+
+
+@app.cell
 def _(create_pandas_dataframe_agent, df_songs, llm):
-    # Agent
     music_historian = create_pandas_dataframe_agent(
         llm=llm, df=df_songs, verbose=True, allow_dangerous_code=False
     )
@@ -122,8 +142,18 @@ def _(create_pandas_dataframe_agent, df_songs, llm):
 
 
 @app.cell
+def _(mo):
+    mo.md(
+        r"""
+    # 3. Usage     
+    ...and now we can just
+    """
+    )
+    return
+
+
+@app.cell
 def _(music_historian):
-    # Usage
     music_historian.invoke("How many songs were released before 1990?")
     return
 
@@ -136,6 +166,12 @@ def _(DATA_DIR, os, pd):
 
 
 @app.cell
+def _(mo):
+    mo.md(r"""# 4. Multi-dataframe mode""")
+    return
+
+
+@app.cell
 def _(create_pandas_dataframe_agent, df_albums, df_artists, df_songs, llm):
     music_historian = create_pandas_dataframe_agent(
         llm=llm,
@@ -144,6 +180,17 @@ def _(create_pandas_dataframe_agent, df_albums, df_artists, df_songs, llm):
         allow_dangerous_code=False,
     )
     return (music_historian,)
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        r"""
+    # 5. Curiosity cabinet     
+    ...I know you have questions, read on.
+    """
+    )
+    return
 
 
 @app.cell(hide_code=True)
@@ -255,7 +302,9 @@ def _(mo):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""There are three main architectural approaches, in order of increasing robustness:""")
+    mo.md(
+        r"""There are three main architectural approaches, in order of increasing robustness:"""
+    )
     return
 
 
