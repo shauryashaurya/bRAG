@@ -302,9 +302,7 @@ def _(mo):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""There are three main architectural approaches, in order of increasing robustness:"""
-    )
+    mo.md(r"""There are three main architectural approaches, in order of increasing robustness:""")
     return
 
 

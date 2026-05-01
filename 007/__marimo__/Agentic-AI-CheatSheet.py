@@ -1,7 +1,10 @@
 import marimo
 
 __generated_with = "0.14.16"
-app = marimo.App(width="medium")
+app = marimo.App(
+    width="medium",
+    layout_file="layouts/Agentic-AI-CheatSheet.slides.json",
+)
 
 
 @app.cell

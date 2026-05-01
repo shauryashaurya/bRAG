@@ -83,7 +83,7 @@ def _(mo):
     # 1. LLM Brain  
 
     The LLM (OpenAI, Gemini, Claude, etc. etc.) can act as a *brain* in that it can quickly convert your ask into a series of 'tasks' that will be executed by one or more 'tools'   
-    
+
     You'll see that we'll keep repeating this section in one form or another...
     """
     )
@@ -190,9 +190,11 @@ def _(mo):
 @app.cell
 def _(coding_agent):
     # Example Task
-    coding_agent.run(
-        "Print all the Fibonacci numbers till the 10th Fibonacci number using a function."
-    )
+    # coding_agent.run(
+    #     "Print all the Fibonacci numbers till the 10th Fibonacci number using a function."
+    # )
+
+    coding_agent.run("print list of 5 consecutive integers less than 31 that sum to 111")
     return
 
 
