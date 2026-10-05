@@ -1,0 +1,16 @@
+{
+    "hooks": {
+        "PostToolUse": [
+            {
+                "matcher": "Edit|Write",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "python -m pytest tests/test_board.py -q --tb=no",
+                        "timeout": 30
+                    }
+                ]
+            }
+        ]
+    }
+}

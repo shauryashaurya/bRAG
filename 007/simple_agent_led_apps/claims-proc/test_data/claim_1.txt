@@ -1,0 +1,8 @@
+INSURANCE CLAIM FORM
+Claimant: Jane Doe
+Email: jane.doe@example.com
+Policy Number: POL-100234
+Incident Date: 2026-03-14
+Claim Amount: $4,250.00
+Description: Rear-ended at a traffic light; bumper and trunk damage.
+Supporting Docs: police_report.pdf, repair_estimate.pdf

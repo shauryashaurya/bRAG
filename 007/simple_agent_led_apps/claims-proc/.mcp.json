@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "claims-pipeline": {
+      "command": "python",
+      "args": ["claims_mcp_server.py"],
+      "env": {
+        "CLAIMS_DB": "claims.db",
+        "CLAIMS_DIR": "test_data"
+      }
+    }
+  }
+}

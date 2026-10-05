@@ -1,0 +1,7 @@
+INSURANCE CLAIM FORM
+Claimant: Alex Morgan
+Email: alex.morgan@example.net
+Policy Number: POL-300417
+Claim Amount: $9,900.00
+Description: Items stolen, details unclear.
+Supporting Docs: none_available.txt

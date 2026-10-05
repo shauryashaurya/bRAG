@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "tictactoe-db": {
+      "command": "python",
+      "args": ["mcp_server.py"]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+INSURANCE CLAIM FORM
+Claimant: Robert Smith
+Email: robert.smith@example.org
+Policy Number: POL-200981
+Incident Date: 2026-05-02
+Claim Amount: $48,500.00
+Description: Kitchen fire caused extensive water and smoke damage.
+Supporting Docs: fire_dept_report.pdf, contractor_quote.pdf
